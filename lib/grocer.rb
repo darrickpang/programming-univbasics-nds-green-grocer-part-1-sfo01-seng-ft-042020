@@ -21,7 +21,7 @@ def consolidate_cart(cart)
       if newcart.include?(item)
         newcart[item][:count] += 1
       else
-        newcart[item] = 
+        newcart[item] = info
         newcart[item][:count] = 1
       end 
     end
