@@ -18,15 +18,15 @@ def consolidate_cart(cart)
   newcart = {}
   cart.count do |element|
     element.each do |item, info|
-    if newcart.include?(item)
-      newcart[item][:count] += 1
-    else
-      newcart[item] = {
+      if newcart.include?(item)
+        newcart[item][:count] += 1
+      else
+        newcart[item] = {
           :price => info[:price],
           :clearance => info[:clearance],
           :count => 1
         }
-  
+      end 
     end
   end
   return newcart
