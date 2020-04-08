@@ -19,6 +19,7 @@ def consolidate_cart(cart)
   cart.each do |element|
     element.each do |item, info|
       if newcart.include?(item)
+        
         newcart[item][:count] += 1
       else
         newcart[item] = {
