@@ -26,7 +26,7 @@ def consolidate_cart(cart)
           :clearance => info[:clearance],
           :count => 1
         }
-      end
+  
     end
   end
   return newcart
